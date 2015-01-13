@@ -29,18 +29,16 @@
 #
 # === Authors
 #
-# Author Name <author@domain.com>
+# Grzegorz Kurkowiak <g.kurkowiak@gmail.com>
 #
 # === Copyright
 #
-# Copyright 2014 Your name here, unless otherwise noted.
+# Copyright 2015 Grzegorz Kurkowiak.
 #
 class corosync (
 
 
 ) inherits corosync::params  {
-
-	 include concat::setup
  	 class { 'corosync::install': }
 
 }
