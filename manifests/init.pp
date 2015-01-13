@@ -40,6 +40,7 @@ class corosync (
 
 ) inherits corosync::params  {
  	 class { 'corosync::install': }
+ 	 class { 'corosync::configure': }
 
 }
 

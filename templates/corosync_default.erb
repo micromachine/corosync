@@ -1,0 +1,52 @@
+totem {
+        version: 2
+        token: 3000
+        token_retransmits_before_loss_const: 10
+        join: 60
+        consensus: 3600
+        vsftype: none
+        max_messages: 20
+        clear_node_high_bit: yes
+        secauth: <%= @secauth_value %>
+        threads: 0
+        nodeid: <%= @nodeid_value %>
+        rrp_mode:  <%= @rrp_mode_value %>
+        interface {
+                ringnumber: 0
+                bindnetaddr: <%= @bindnetaddr_value %> 
+                mcastaddr: <%= @mcastaddr_value %>
+                mcastport: <%= @mcastport_value %>
+        }
+}
+
+amf {
+        mode: disabled
+}
+
+quorum {
+        provider: corosync_votequorum
+        expected_votes: 1
+}
+
+aisexec {
+        user:   root
+        group:  root
+}
+
+logging {
+        fileline: off
+        to_stderr: yes
+        to_logfile: no
+        to_syslog: yes
+        syslog_facility: daemon
+        debug: <%= @debug_logging_value %>
+        timestamp: on
+        logger_subsys {
+                subsys: AMF
+                debug: off
+                tags: enter|leave|trace1|trace2|trace3|trace4|trace6
+        }
+}
+
+
+
