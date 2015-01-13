@@ -35,7 +35,13 @@
 #
 # Copyright 2014 Your name here, unless otherwise noted.
 #
-class corosync {
+class corosync (
 
+
+) inherits corosync::params  {
+
+	 include concat::setup
+ 	 class { 'corosync::install': }
 
 }
+

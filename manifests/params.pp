@@ -1,0 +1,4 @@
+class corosync::params {
+
+
+}
