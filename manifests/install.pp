@@ -11,12 +11,6 @@ class corosync::install {
                 }
 	file { '/etc/default/corosync':
                 content => 'START=no',
-                require => Package['haproxy'],
+                require => Package['corosync'],
                 }
-  	file { '/etc/corosync/corosync.conf':
-    		mode    => '0644',
-    		owner   => 'root',
-    		group   => 'root',
-    		require => Package['corosync'],
-  	     }
 } 
