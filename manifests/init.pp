@@ -37,6 +37,9 @@
 #
 class corosync (
 
+
+
+
 ) inherits corosync::params  {
 	 include concat::setup
  	 class { 'corosync::install': }
