@@ -1,5 +1,5 @@
 # corosync
-Puppet module for corosync - installation and basic configuration; 
+<h>Puppet module for corosync - installation and basic configuration </h1>
 
 # Managed by Puppet
 totem {
