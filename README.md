@@ -1,7 +1,7 @@
 # corosync
 <h>Puppet module for corosync - installation and basic configuration </h1>
-
-# Managed by Puppet
+<pre>
+Managed by Puppet
 totem {
         version: 2
         token: 3000
@@ -51,7 +51,7 @@ logging {
                 tags: enter|leave|trace1|trace2|trace3|trace4|trace6
         }
 }
-
+</pre>
 
 
 
